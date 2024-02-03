@@ -18,7 +18,7 @@ class ScannerController {
         return str;
       })();
       console.log("materials: ",materials);
-      return res.status(201).json(materials);
+      return res.status(201).json(JSON.parse(materials));
     } catch (e) {
       console.log(e);
       next(e);
